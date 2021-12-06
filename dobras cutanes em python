@@ -1,0 +1,26 @@
+
+nome = input("Qual o seu nome: ")
+
+idade = float(input("Qual a sua idade: "))
+print(f"Ola {nome}, Vamos começar o calculo de gordura corporal")
+
+
+tricipital = float(input("digite o triceps: "))
+subescapular = float(input("digite a subscapula: "))
+peitoral = float(input("digite o peitoral: "))
+maxilarMédia = float(input("digite seu maxilar medial: "))
+abdominal = float(input("digite seu abdominal: "))
+suprailíaca = float(input("digite seu suprailiaca: "))
+coxa = float(input("digite sua coxa: "))
+
+Dobras = tricipital + subescapular + peitoral + maxilarMédia + abdominal + suprailíaca + coxa
+
+DC = 1.112-0.00043499 * Dobras + 0.00000055 * Dobras * 2 - 0.00028826 * idade
+print(f"Sua densidade corporal é: {DC} ")
+
+Gordura = ((4.95 / DC) - 4.50) * 100
+print(f"Sua gordura corporal é: {Gordura}")
+
+
+
+
